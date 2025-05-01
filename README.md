@@ -12,7 +12,9 @@
     docker run --name=subconverter -d --restart=unless-stopped --memory=1024m -e TZ=Asia/Shanghai -p 25500:25500 asdlokj1qpi23/subconverter:latest
     ```
 
-       部署成功后访问 http://主机IP:端口/version   ，如果有出现：版本号表示部署成功。
+       部署成功后访问 http://主机IP:端口/version   ，如果有出现版本号表示部署成功。
+
+      订阅转换服务器转换地址为：http://主机IP:端口/sub 
 
   - 先fork一份本项目，进入到fork的项目后进入自己项目里开始编辑clash_rules.ini文件，将绿色下划线替换成自己github的用户名，来指向自己仓库的规则。
 
