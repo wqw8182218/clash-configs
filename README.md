@@ -1,57 +1,70 @@
 # rules-template
 
-- **订阅转换模板**
+- ### 项目简介
 
   - 平时使用代理配置时候会将规则写入本地软件配置里。会出现一些问题。例如，不同客户端无法共用分流规则（singbox的分流配置无法放到clash中使用），修改一个客户端无法同步另外一个客户端，（修改手机singbox分流规则。PC的clash无法同步）等问题。为了解决这类问题，可以写一份分流规则模板放代码托管平台托管。然后配合订阅转换服务将模板转换成不同客户端的配置。
 
-- 订阅转换服务安装：
+- ### 使用教程：
 
-  - 参考文档：
+  1. #### 配置克隆和修改
 
-    - [https://github.com/tindy2013/subconverter]: 	"支持clash ss ssr V2Ray等客户端转换"
-      [https://github.com/asdlokj1qpi233/subconverter]: 	"推荐！在前一个转换服务的基础上添加singbox，Surge 5的支持"
+     - 无自定义规则：
 
-  - ```
-    
-    ```
+       - 如果没有自定义规则需求，只想使用公共规则科学上网，可以使用此仓库的规则配置模板，地址：
 
-    
+       - ```
+         https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/config.ini
+         ```
 
-- 下面以openwrt的clash为例：
+     - 自定义规则：
 
-  - 订阅转换部署：
+       1. 先fork一份项目到自己仓库。后续规则修改都在自己仓库进行：
+          - ![](images/image1.png)
+       2. 修改自定义规则的指向地址：
+          - config.ini文件中的绿色方框中地址的蓝色下划线的用户名换成自己github账号的用户名。使其指向自己fork的仓库
+          - ![](images/image2.png)
+          - 后续如果需要添加直连
 
-    ​	使用dockers：
+  2. #### 订阅转换服务安装：
 
-    ```
-    docker run --name=subconverter -d --restart=unless-stopped --memory=1024m -e TZ=Asia/Shanghai -p 25500:25500 asdlokj1qpi23/subconverter:latest
-    ```
+     - 因为网上公开的订阅转换存在机场被盗用的风险，所以推荐自建一个本地的订阅转换服务。
 
-       部署成功后访问 http://主机IP:端口/version   ，如果有出现版本号表示部署成功。
+     - 参考文档：
 
-      订阅转换服务器转换地址为：http://主机IP:端口/sub 
+       - [https://github.com/tindy2013/subconverter]: 	"支持clash ss ssr V2Ray等客户端转换"
+         [https://github.com/asdlokj1qpi233/subconverter]: 	"推荐！在前一个转换服务的基础上添加singbox，Surge 5的支持"
 
-  - 先fork一份本项目，进入到fork的项目后进入自己项目里开始编辑clash_rules.ini文件，将绿色下划线替换成自己github的用户名，来指向自己仓库的规则。
+     - 这里通过docker使用asdlokj1qpi233/subconverter项目安装订阅转换服务：
 
-    - ![image-20250501151015476](image-20250501151015476.png)
+       - 部署好后浏览器访问：
 
-  - 点击软路由openclash插件，进入到订阅配置中
+         http://[ip]:25500/version
 
-  - ![image-20250501151206283](image-20250501151206283.png)
+         ,可以打印出版本信息表示部署成功，安装命令：
 
-  - 新建一个配置
+       - ```
+         docker run --name=subconverter -d --restart=unless-stopped --memory=1024m -e TZ=Asia/Shanghai -p 25500:25500 asdlokj1qpi23/subconverter:latest
+         ```
 
-  - 获取配置只读地址：
+  3. #### 拼接订阅地址：
 
-  - ![image-20250501151625443](image-20250501151625443.png)
+    - 如果需要前端UI界面可以参考，这里不做演示：
 
-    - 点击raw打开后跳转一个新标签。复制标签地址
-    - ![image-20250501151714402](image-20250501151714402.png)
+      [https://github.com/CareyWang/sub-web]: 	"订阅转换前端UI"
 
-  - 修改配置：
+    - 通过2步骤你已经成功部署好了订阅转换服务，接下来就可以拼接参数来获取订阅地址了：
 
-    - ![image-20250501152138844](image-20250501152138844.png)
+      - 订阅转换服务的地址,{ip}需要替换成你自己部署机器的IP，http://{ip}:25500/sub
 
-      ​	保存配置。并且应用配置就生效了
+      - 参数拼接参考，将其中的config参数换成raw地址即可
 
-    
+        ```
+        https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/config.ini
+        ```
+
+        - []: https://github.com/tindy2013/subconverter
+
+  4. #### openclash使用参考：
+
+     1. ![](images/image5.png)
+     2. ![](images/image4.png)
