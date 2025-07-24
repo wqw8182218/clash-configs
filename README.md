@@ -52,7 +52,9 @@
 
       前端UI:https://github.com/CareyWang/sub-web
 
-    - 现成前端：https://sub-web.netlify.app/
+    - 现成前端：https://sub-web.netlify.app/  
+
+          - uri编码地址：[URL Encode and Decode - Online](https://www.urlencoder.org/)
 
         具体步骤：
 
