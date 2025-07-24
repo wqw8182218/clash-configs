@@ -50,12 +50,14 @@
 
     - 如果需要前端UI界面可以参考，这里不做演示：
 
-      [https://github.com/CareyWang/sub-web]: 	"订阅转换前端UI"
+      [https://github.com/CareyWang/sub-web]: 		"订阅转换前端UI"
 
     - 现成前端：
 
-        - [https://sub-web.netlify.app/]: 现成SUB-WEB
+        - [https://sub-web.netlify.app/]: 	"现成SUB-WEB"
 
+          
+        
           ![](./images/image6.png)
 
     - 通过2步骤你已经成功部署好了订阅转换服务，接下来就可以拼接参数来获取订阅地址了：
@@ -63,14 +65,14 @@
       - 订阅转换服务的地址,{ip}需要替换成你自己部署机器的IP，http://{ip}:25500/sub
 
       - 参数拼接参考，将其中的config参数换成raw地址即可
-
+  
         ```
-        https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/config.ini
+      https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/config.ini
         ```
 
         - []: https://github.com/tindy2013/subconverter
 
   4. #### openclash使用参考：
-
+  
      1. ![](images/image5.png)
      2. ![](images/image4.png)
