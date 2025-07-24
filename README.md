@@ -50,11 +50,9 @@
 
     - 如果需要前端UI界面可以参考，这里不做演示：
 
-      [https://github.com/CareyWang/sub-web]: 		"订阅转换前端UI"
+      前端UI:https://github.com/CareyWang/sub-web
 
-    - 现成前端：
-
-        [https://sub-web.netlify.app/]: 	"现成SUB-WEB"
+    - 现成前端：https://sub-web.netlify.app/
 
         具体步骤：
 
