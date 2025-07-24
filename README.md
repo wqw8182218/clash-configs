@@ -54,7 +54,7 @@
 
     - 现成前端：https://sub-web.netlify.app/  
 
-          - uri编码地址：https://www.urlencoder.org/
+        uri编码工具：https://www.urlencoder.org/
 
         具体步骤：
 
