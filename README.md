@@ -1,4 +1,4 @@
-# rules-template
+# clash-configs
 
 - ### 项目简介
 
@@ -12,7 +12,7 @@
 
      1. 下载一键配置文件，开启命令窗口下载配置到本地：
 
-        1. ```
+        1. ```shell
       curl https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/clash.yaml > clash.yaml
            ```
   
