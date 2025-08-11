@@ -40,9 +40,11 @@
 
      2. 这两个地址指向"ProxyLite.list"和"Direct.list"两个文件,fork目的就是提供给自己维护，今后只要往"ProxyLite.list" 文件里添加规则就走默认代理，"Direct.list"文件里添加救走直连。具体规则语法参考：https://wiki.metacubex.one/config/ 
 
-     3. ![](./images/6.png)
+     3. ![](./images/9.png)
 
-     4. ![](./images/7.png)
+     4. ![](./images/6.png)
 
-     5. 其他步骤参考：**1.无自定义规则需求**
+     5. ![](./images/7.png)
+
+     6. 其他步骤参考：**1.无自定义规则需求**
 
