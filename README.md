@@ -4,7 +4,7 @@
 
   - clash开箱即用配置，可直接添加机场使用，如果不熟练yaml语法可以参考：
 
-    [yaml语法]: https://zh.wikipedia.org/wiki/YAML#%E8%AA%9E%E6%B3%95
+  - [yaml语法]: https://zh.wikipedia.org/wiki/YAML#%E8%AA%9E%E6%B3%95	"yaml语法"
 
 - ### 使用教程：
 
