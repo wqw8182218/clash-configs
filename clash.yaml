@@ -167,8 +167,8 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/ProxyLite.list"}
-  direct_domain: {<<: *class,url: "https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/Direct.list"}
+  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/chen7011/clash-configs/refs/heads/main/ProxyLite.list"}
+  direct_domain: {<<: *class,url: "https://raw.githubusercontent.com/chen7011/clash-configs/refs/heads/main/Direct.list"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
