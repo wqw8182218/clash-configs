@@ -3,3 +3,4 @@
 DOMAIN-KEYWORD,googel
 # 域名后缀匹配
 DOMAIN-SUFFIX,googel.com
+DOMAIN,api.themoviedb.org
