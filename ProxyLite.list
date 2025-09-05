@@ -2,7 +2,6 @@
 # 域名关键字匹配
 DOMAIN-KEYWORD,googel
 # 域名后缀匹配
-<<<<<<< HEAD
 DOMAIN-SUFFIX,googel.com
 DOMAIN,api.themoviedb.org
 =======
@@ -68,4 +67,3 @@ DOMAIN-SUFFIX,ptsbao.club
 DOMAIN-SUFFIX,crabpt.vip
 #车站
 DOMAIN-SUFFIX,carpt.net
->>>>>>> 4c5edf27613ec0d1e3ef500ba76ffb8521ec2018
